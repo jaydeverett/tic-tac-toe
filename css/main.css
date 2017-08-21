@@ -1,0 +1,75 @@
+html {
+  text-align: center;
+}
+
+body {
+  /*background-color: #8A458A;*/
+}
+
+h1 {
+  font-family: 'Ewert', cursive;
+  text-align: center;
+  /*color: white;*/
+  /*border-bottom: 5px solid #751825;*/
+}
+
+h3 {
+  border: 2px solid black;
+  background-color: red;
+  width: 5em;
+  margin: 2em auto;
+}
+
+body > div > div.top-row > .square {
+  display: inline-block;
+}
+
+body > div > div.middle-row > .square {
+  display: inline-block;
+}
+
+body > div > div.bottom-row > .square {
+  display: inline-block;
+}
+
+.square:hover {
+  background-color: grey;
+}
+
+.square {
+  border: 5px solid black;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  background-color: white;
+  overflow: hidden;
+  content: none;
+  /*position: relative;*/
+}
+
+.x:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c";
+    font-size: 50px;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+    display: none;
+}
+
+.o:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\2B55";
+    font-size: 50px;
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+    display: none;
+}
