@@ -1,4 +1,4 @@
-var square = document.querySelector('.square');
+var square = document.querySelectorAll('.square');
 var x = document.querySelector('.x');
 var o = document.querySelector('.o');
 // var square1 = document.querySelector('#top-left');
@@ -23,15 +23,23 @@ startButton.addEventListener('click', function () {
 //     if (this.innerText === )
 //   })
 // }
+for (var i=0; i < square.length; i++) {
 
-
-square.addEventListener('click', function() {
-  if (counter % 2 === 0) {
-    x.style.display = block;
+square[i].addEventListener('click', function( e ) {
+  if (e.target.className === 'square x' || e.target.className === 'square o') {
+    startButton.innerText = 'Sorry. That square has already been clicked.';
+    setTimeout( function () {
+      startButton.innerText = ' '
+    }, 1000);
+  }
+  else if (counter % 2 === 0) {
+    e.target.classList.add('x');
     counter += 1;
   }
   else if (counter % 2 === 1) {
-    square.style.content = "\2B55";
+    e.target.classList.add('o');
     counter += 1;
   }
 })
+
+}
